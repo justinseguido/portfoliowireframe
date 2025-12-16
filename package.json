@@ -1,23 +1,13 @@
-
-
-
 {
   "name": "portfoliowireframe",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "type": "commonjs",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
-  },
-  "type": "commonjs"
-
-  
+  }
 }
