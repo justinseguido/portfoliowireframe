@@ -2,3 +2,16 @@
 
 @import "tailwindcss";
 
+/* ⭐ Star Rating (Review Modal) */
+.star {
+  font-size: 1.5rem;
+  color: #334155; /* slate-700 */
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.star:hover,
+.star.active {
+  color: #fbbf24; /* amber-400 */
+  transform: scale(1.1);
+}
+
