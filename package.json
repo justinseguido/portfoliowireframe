@@ -4,8 +4,9 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
-  },
+  "build": "echo \"Static build — CSS already generated\""
+},
+
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
