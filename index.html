@@ -700,6 +700,24 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
   async>
 </script>
 
+<script>
+  window.addEventListener("message", function (e) {
+    if (
+      e.data.event &&
+      e.data.event === "calendly.event_scheduled"
+    ) {
+      if (typeof gtag === "function") {
+        gtag("event", "calendly_booking", {
+          event_category: "engagement",
+          event_label: "Strategy Call",
+          value: 1
+        });
+      }
+    }
+  });
+</script>
+
+
               
           
         </div>
@@ -862,16 +880,28 @@ function closeReviewModal() {
     });
 
     if (response.ok) {
-      form.reset();
-      form.classList.add("hidden");
-      successMessage.classList.remove("hidden");
+  // 🔔 GA4 EVENT — Review Submitted
+  if (typeof gtag === "function") {
+    gtag("event", "review_submitted", {
+      event_category: "engagement",
+      event_label: "Formspree Testimonial",
+      value: 1
+    });
+  }
 
-      setTimeout(() => {
-        closeReviewModal();
-        form.classList.remove("hidden");
-        successMessage.classList.add("hidden");
-      }, 2000);
-    } else {
+  form.reset();
+  form.classList.add("hidden");
+  successMessage.classList.remove("hidden");
+
+  setTimeout(() => {
+    closeReviewModal();
+    form.classList.remove("hidden");
+    successMessage.classList.add("hidden");
+  }, 2000);
+}
+
+
+       else {
       alert("Submission failed. Please try again.");
     }
   });
