@@ -93,6 +93,7 @@
   anonymize_ip: true
 </script>
 
+<script async src="https://www.googletagmanager.com/gtag/js"></script>
 
 </head>
 
@@ -829,7 +830,7 @@
     <div class="grid gap-8 md:grid-cols-2 md:items-center">
 
       <!-- LEFT: Photo + Badges -->
-      <div class="flex flex-col items-center md:items-start">
+      <div class="flex h-full flex-col items-center justify-center">
 
         <!-- Profile Photo -->
         <img
@@ -1183,11 +1184,10 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
 
   <!-- Calendly Container -->
   <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white">
-    <div
-      class="calendly-inline-widget"
-      data-url="https://calendly.com/jbseguido/30min"
-      style="min-width:320px;height:650px;" loading="lazy">
-    </div>
+    <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/jbseguido" style="min-width:320px;height:700px;"></div>
+
+
   </div>
 
   <!-- Footer Note -->
@@ -1200,13 +1200,9 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
 
 </div>
 
-<!-- Calendly Script -->
-<script
-  src="https://assets.calendly.com/assets/external/widget.js"
-  async>
-</script>
-
-<script>
+<script loading="lazy" type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+ <script>
   window.addEventListener("message", function (e) {
     if (
       e.data.event &&
@@ -1222,6 +1218,7 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
     }
   });
 </script>
+
 
 
               
