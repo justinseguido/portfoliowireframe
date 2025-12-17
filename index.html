@@ -742,7 +742,76 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
     </div>
   </footer>
 
-  
+  <!-- COOKIE CONSENT -->
+<div
+  id="cookieConsent"
+  class="fixed bottom-4 left-4 right-4 z-[9999] hidden max-w-3xl rounded-2xl border border-white/10 bg-slate-900 p-5 shadow-2xl md:left-1/2 md:right-auto md:-translate-x-1/2"
+>
+  <p class="text-sm text-slate-300 leading-relaxed">
+    This website uses cookies and Google Analytics to analyze traffic and improve
+    user experience. No personally identifiable data is stored.
+    <a href="#privacy" class="underline underline-offset-4 hover:text-white">
+      Learn more
+    </a>.
+  </p>
+
+  <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
+    <button
+      id="declineCookies"
+      class="rounded-lg border border-white/20 px-4 py-2 text-sm text-slate-300 hover:bg-white/5"
+    >
+      Decline
+    </button>
+
+    <button
+      id="acceptCookies"
+      class="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200"
+    >
+      Accept
+    </button>
+  </div>
+</div>
+
+<script>
+  const consentKey = "cookieConsentAccepted";
+
+  function loadGoogleAnalytics() {
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-XJWZB7LTX5";
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-XJWZB7LTX5", {
+        anonymize_ip: true
+      });
+    };
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("cookieConsent");
+
+    if (!localStorage.getItem(consentKey)) {
+      banner.classList.remove("hidden");
+    } else {
+      loadGoogleAnalytics();
+    }
+
+    document.getElementById("acceptCookies").onclick = () => {
+      localStorage.setItem(consentKey, "true");
+      banner.classList.add("hidden");
+      loadGoogleAnalytics();
+    };
+
+    document.getElementById("declineCookies").onclick = () => {
+      banner.classList.add("hidden");
+    };
+  });
+</script>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -840,5 +909,6 @@ document.addEventListener("DOMContentLoaded", () => {
   </script>
 
   
+
 </body>
 </html>
