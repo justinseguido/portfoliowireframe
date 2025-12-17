@@ -1183,12 +1183,14 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
   </div>
 
   <!-- Calendly Container -->
-  <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white">
-    <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/jbseguido" style="min-width:320px;height:700px;"></div>
-
-
+<div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white">
+  <div
+    class="calendly-inline-widget"
+    data-url="https://calendly.com/jbseguido"
+    style="min-width:320px;height:700px;">
   </div>
+</div>
+
 
   <!-- Footer Note -->
   <p class="mt-3 text-xs text-slate-400">
@@ -1482,7 +1484,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-  
+  <!-- Calendly Script -->
+<script async src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+<script>
+  window.addEventListener("message", function (e) {
+    if (e.data?.event === "calendly.event_scheduled") {
+      if (typeof gtag === "function") {
+        gtag("event", "booking_completed", {
+          event_category: "engagement",
+          event_label: "Portfolio Calendly Booking",
+          value: 1
+        });
+      }
+    }
+  });
+</script>
+
 
 </body>
 </html>
