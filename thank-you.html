@@ -169,17 +169,24 @@
     </div>
   </div>
 <script>
-(function () {
+window.addEventListener('load', function () {
+
+  // Prevent duplicate fires on refresh
+  if (sessionStorage.getItem("booking_completed_fired")) return;
 
   if (typeof gtag === "function") {
     gtag("event", "booking_completed", {
+      send_to: "G-XJWZB7LTX5",
       event_category: "conversion",
       event_label: "Thank You Page",
       value: 1
     });
+
+    sessionStorage.setItem("booking_completed_fired", "true");
+    console.log("booking_completed sent to GA4");
   }
 
-})();
+});
 </script>
 
 </body>
