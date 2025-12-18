@@ -171,23 +171,11 @@
 <script>
 (function () {
 
-  /* ---------- GA4 (Debug Guaranteed) ---------- */
   if (typeof gtag === "function") {
     gtag("event", "booking_completed", {
-      debug_mode: true,
       event_category: "conversion",
       event_label: "Thank You Page",
       value: 1
-    });
-    console.log("🔥 booking_completed fired (debug)");
-  }
-
-  /* ---------- Google Ads ---------- */
-  if (typeof gtag === "function") {
-    gtag("event", "conversion", {
-      send_to: "AW-123456789/AbCdEfGhIjK",
-      value: 1.0,
-      currency: "USD"
     });
   }
 
