@@ -1186,9 +1186,15 @@ class="fixed inset-0 z-[2147483647] hidden flex items-center justify-center bg-b
   <div class="relative rounded-2xl border border-white/10 bg-white">
     <iframe
       src="https://api.leadconnectorhq.com/widget/booking/ZFgZvgiuvQ9uleDHzVyB"
-      style="width:100%;height:700px;border:0;"
-      scrolling="no"
-      allow="camera; microphone; fullscreen">
+      style="
+      width:100%;
+      height:700px;
+      border:0;
+      overflow:auto;
+      -webkit-overflow-scrolling: touch;
+    "
+    scrolling="yes"
+    allow="camera; microphone; fullscreen">
     </iframe>
     <script>
   window.addEventListener("message", function (event) {
