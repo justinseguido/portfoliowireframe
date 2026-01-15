@@ -583,93 +583,164 @@
 
 </div>
 
-        <!-- Right (Placeholder Visual) -->
-        <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
-          <div class="flex items-center justify-between">
-            <div class="text-m font-semibold">Example: Revenue Automation System</div>
-            <div class="text-s text-slate-400">Lead → Logic → Booking → Retention</div>
+ <!-- System Architecture Diagram (FIXED) -->
+<div class="relative rounded-3xl border border-white/10 bg-slate-900/90 backdrop-blur-xl p-6 shadow-2xl">
+  
+  <!-- Header -->
+  <div class="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+    <div class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20">
+        <svg class="h-6 w-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white">Revenue Automation System</h2>
+        <p class="text-xs text-slate-400">Lead → Revenue Flow</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flow Diagram -->
+  <div class="space-y-5">
+
+    <!-- Step 1: Inbound -->
+    <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-5 transition-all duration-300 hover:border-cyan-500/30">
+      <div class="flex items-start gap-4">
+        <!-- Step Badge (FIXED - smaller) -->
+        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-cyan-500/20 text-sm font-bold text-cyan-400 ring-2 ring-cyan-500/30">
+          1
+        </div>
+        <!-- Content -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-base font-bold text-white mb-2">Inbound Lead Sources</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Website • Paid Ads • Airbnb • OwnerRez • Direct Referrals
+          </p>
+          <!-- Inline explanation (FIXED - no tooltip) -->
+          <div class="rounded-lg border border-cyan-500/20 bg-cyan-500/5 p-3">
+            <p class="text-xs text-slate-300 leading-relaxed">
+              All leads normalized into single intake layer—no source treated differently or lost.
+            </p>
           </div>
-
-         <div class="mt-4 grid gap-4 text-s text-slate-300">
-
-  <!-- Inbound -->
-  <div class="group relative rounded-2xl border border-white/10 bg-slate-900/40 p-4">
-    <div class="text-lg text-white font-semibold">Inbound Lead Sources</div>
-    <div class="mt-1 text-slate-300">
-      Website • Ads • Airbnb • OwnerRez • Referrals
-    </div>
-
-    <div
-      class="pointer-events-none absolute inset-x-4 -bottom-3 translate-y-full rounded-xl border border-white/10 bg-slate-950/95 p-3 text-xs text-slate-300 opacity-0 shadow-lg transition
-             group-hover:opacity-100 group-hover:translate-y-2 hidden md:block">
-      All leads are normalized into a single intake layer so no source is treated differently or lost.
-    </div>
-  </div>
-
-  <!-- Arrow -->
-  <div class="flex justify-center py-1">
-    <span class="animate-flow motion-reduce:animate-none text-slate-500">↓</span>
-  </div>
-
-  <!-- Logic Layer -->
-  <div class="grid gap-4 md:grid-cols-2">
-
-    <!-- CRM -->
-    <div class="group relative rounded-2xl border border-white/10 bg-slate-900/40 p-4">
-      <div class="font-semibold text-white">CRM Structure & Lead Context</div>
-      <div class="mt-1 text-slate-400">
-        Pipelines • Tags • Custom Fields • Status Mapping
-      </div>
-
-      <div
-        class="pointer-events-none absolute inset-x-4 -bottom-3 translate-y-full rounded-xl border border-white/10 bg-slate-950/95 p-3 text-xs text-slate-300 opacity-0 shadow-lg transition
-               group-hover:opacity-100 group-hover:translate-y-2 hidden md:block">
-        Data is structured before automation runs, ensuring workflows behave correctly across edge cases.
+        </div>
       </div>
     </div>
 
-    <!-- Automation -->
-    <div class="group relative rounded-2xl border border-white/10 bg-slate-900/40 p-4">
-      <div class="font-semibold text-white">Automation & Decision Logic</div>
-      <div class="mt-1 text-slate-400">
-        Triggers • Conditions • SMS / Email • Timing Rules
+    <!-- Arrow with Forced Container (NUCLEAR FIX) -->
+<li class="flex justify-center py-2" role="presentation" aria-hidden="true">
+  <div class="h-6 w-6 flex items-center justify-center">
+    <svg 
+      width="24" 
+      height="24" 
+      class="text-cyan-400 animate-bounce" 
+      style="animation-duration: 2s; max-width: 24px; max-height: 24px;"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2.5" 
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+      />
+    </svg>
+  </div>
+</li>
+
+    <!-- Steps 2 & 3: Logic Layer -->
+    <div class="grid gap-5 sm:grid-cols-2">
+      
+      <!-- CRM Logic -->
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-5 transition-all duration-300 hover:border-blue-500/30">
+        <div class="flex items-start gap-4">
+          <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-sm font-bold text-blue-400 ring-2 ring-blue-500/30">
+            2
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-base font-bold text-white mb-2">CRM Structure</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              Pipelines • Tags • Custom Fields
+            </p>
+            <div class="rounded-lg border border-blue-500/20 bg-blue-500/5 p-3">
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Data structured before automation runs—ensures correct behavior.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div
-        class="pointer-events-none absolute inset-x-4 -bottom-3 translate-y-full rounded-xl border border-white/10 bg-slate-950/95 p-3 text-xs text-slate-300 opacity-0 shadow-lg transition
-               group-hover:opacity-100 group-hover:translate-y-2 hidden md:block">
-        Conditional logic routes each lead through the correct messaging based on intent, timing, and status.
+      <!-- Automation Logic -->
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-5 transition-all duration-300 hover:border-purple-500/30">
+        <div class="flex items-start gap-4">
+          <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/20 text-sm font-bold text-purple-400 ring-2 ring-purple-500/30">
+            3
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-base font-bold text-white mb-2">Automation</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              Triggers • Conditions • SMS/Email
+            </p>
+            <div class="rounded-lg border border-purple-500/20 bg-purple-500/5 p-3">
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Routes each lead through correct messaging based on context.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrow with Forced Container (NUCLEAR FIX) -->
+<li class="flex justify-center py-2" role="presentation" aria-hidden="true">
+  <div class="h-6 w-6 flex items-center justify-center">
+    <svg 
+      width="24" 
+      height="24" 
+      class="text-cyan-400 animate-bounce" 
+      style="animation-duration: 2s; max-width: 24px; max-height: 24px;"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2.5" 
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+      />
+    </svg>
+  </div>
+</li>
+
+    <!-- Step 4: Outcomes -->
+    <div class="rounded-2xl border-2 border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 to-green-600/10 p-5 transition-all duration-300 hover:border-emerald-500/50">
+      <div class="flex items-start gap-4">
+        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/30 text-sm font-bold text-emerald-400 ring-2 ring-emerald-500/40">
+          4
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-base font-bold text-white mb-2">Revenue Outcomes</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Bookings • Repeat Bookings • 5-Star Reviews • Retention
+          </p>
+          <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-3">
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Drives measurable results: higher conversion, repeat bookings, long-term retention.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <!-- Arrow -->
-  <div class="hidden md:flex justify-center py-1">
-    <span class="animate-flow text-slate-500">↓</span>
-  </div>
-
-  <!-- Outcome -->
-  <div class="group relative rounded-2xl border border-white/10 bg-slate-900/40 p-4">
-    <div class="font-semibold text-white">Revenue & Retention Outcomes</div>
-    <div class="mt-1 text-slate-400">
-      Bookings • Rebook Campaigns • Reviews • Follow-Ups
-    </div>
-
-    <div
-      class="pointer-events-none absolute inset-x-4 -bottom-3 translate-y-full rounded-xl border border-white/10 bg-slate-950/95 p-3 text-xs text-slate-300 opacity-0 shadow-lg transition
-             group-hover:opacity-100 group-hover:translate-y-2 hidden md:block">
-      The system drives measurable outcomes: conversions, repeat bookings, and long-term retention.
-    </div>
   </div>
 
 </div>
-
-
-
-        </div>
-      </div>
-    </section>
 
     <!-- CREDIBILITY STRIP -->
     <section class="border-y border-white/10 bg-white/[0.03]">
