@@ -231,101 +231,147 @@
 </style>
 
   <main id="top">
- <!-- HERO -->
-<section class="relative mx-auto max-w-6xl px-4 py-20 md:py-32">
+ <!-- HERO SECTION - Senior Optimized -->
+<section class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 lg:py-32" aria-labelledby="hero-heading">
   
-  <!-- Background gradients (subtle) -->
-  <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-    <div class="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl"></div>
-    <div class="absolute -bottom-24 right-1/4 h-96 w-96 rounded-full bg-blue-600/5 blur-3xl"></div>
+  <!-- Background Effects (Optimized) -->
+  <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-32 left-1/4 h-[400px] w-[400px] rounded-full bg-cyan-500/5 blur-3xl"></div>
+    <div class="absolute -bottom-32 right-1/4 h-[400px] w-[400px] rounded-full bg-blue-600/5 blur-3xl"></div>
   </div>
 
-  <div class="relative z-10 grid items-center gap-12 lg:grid-cols-2">
+  <!-- SVG Definitions (Define once, use everywhere) -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <defs>
+      <!-- Reusable gradient -->
+      <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" class="gradient-start" />
+        <stop offset="100%" class="gradient-end" />
+      </linearGradient>
+      
+      <!-- Reusable arrow -->
+      <symbol id="arrow-down" viewBox="0 0 24 24">
+        <path 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2.5" 
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+        />
+      </symbol>
+      
+      <!-- Reusable checkmark -->
+      <symbol id="checkmark" viewBox="0 0 20 20">
+        <path 
+          fill-rule="evenodd" 
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 xl:gap-20">
     
     <!-- LEFT COLUMN -->
-    <div class="space-y-8">
+    <div class="space-y-6 md:space-y-8">
       
       <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 px-4 py-2">
-        <span class="relative flex h-2 w-2">
+      <div class="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 px-4 py-2 shadow-lg shadow-cyan-500/10">
+        <span class="relative flex h-2 w-2" aria-hidden="true">
           <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75"></span>
           <span class="relative inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
         </span>
-        <span class="text-xs font-bold tracking-wide text-cyan-400">REVENUE AUTOMATION SYSTEMS</span>
-        <span class="text-xs text-slate-400">•</span>
-        <span class="text-xs font-semibold text-slate-300">GHL Certified</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Revenue Automation</span>
+        <span class="text-xs text-slate-400" aria-hidden="true">•</span>
+        <span class="text-xs font-semibold text-slate-200">GHL Certified</span>
       </div>
 
       <!-- Title -->
-      <h1 class="max-w-2xl text-5xl font-black tracking-tighter text-white md:text-6xl lg:text-7xl leading-[1.1]">
+      <h1 id="hero-heading" class="max-w-2xl text-4xl font-black tracking-tighter text-white md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1]">
         Fix Broken GHL Automations That
-        <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-          Lose Leads
+        <span class="relative inline-block mt-2">
+          <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+            Lose Leads
+          </span>
+          <!-- Animated underline -->
+          <span class="absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full opacity-50" aria-hidden="true"></span>
         </span>
       </h1>
 
       <!-- Subtitle -->
-      <p class="max-w-xl text-xl text-slate-300 leading-relaxed">
+      <p class="max-w-xl text-lg md:text-xl text-slate-300 leading-relaxed">
         For <strong class="font-semibold text-white">STR operators</strong> drowning in manual follow-up. 
-        Get systems that enforce speed—<span class="text-cyan-400">without micromanaging</span>.
+        Get systems that enforce speed—<span class="font-medium text-cyan-400">without micromanaging</span>.
       </p>
 
       <!-- CTAs -->
-      <div class="flex flex-wrap items-center gap-4">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
         <!-- Primary CTA -->
-        <a href="#contact" class="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-base font-bold text-white shadow-xl shadow-cyan-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105">
+        <a 
+          href="#contact" 
+          class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-base font-bold text-white shadow-xl shadow-cyan-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 active:scale-100"
+          aria-label="Book a free strategy call"
+        >
           <span class="relative z-10">Book Strategy Call</span>
-          <svg class="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
-          <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full"></div>
+          <!-- Shine effect -->
+          <span class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" aria-hidden="true"></span>
         </a>
 
         <!-- Secondary CTA -->
-        <a href="#case-studies" class="group inline-flex items-center gap-2 rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/50 hover:bg-white/10">
+        <a 
+          href="#case-studies" 
+          class="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/50 hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/20"
+        >
           See How It Works
-          <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
         </a>
       </div>
 
       <!-- Trust Indicators -->
-      <div class="flex flex-wrap items-center gap-6 pt-4 border-t border-white/10">
-        <div class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      <ul class="flex flex-wrap items-center gap-6 pt-6 border-t border-white/10" role="list">
+        <li class="flex items-center gap-2">
+          <svg class="h-5 w-5 flex-shrink-0 text-emerald-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <use href="#checkmark" />
           </svg>
           <span class="text-sm font-medium text-slate-300">50+ Systems Built</span>
-        </div>
+        </li>
         
-        <div class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        <li class="flex items-center gap-2">
+          <svg class="h-5 w-5 flex-shrink-0 text-emerald-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <use href="#checkmark" />
           </svg>
           <span class="text-sm font-medium text-slate-300">OwnerRez Specialist</span>
-        </div>
+        </li>
         
-        <div class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        <li class="flex items-center gap-2">
+          <svg class="h-5 w-5 flex-shrink-0 text-emerald-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <use href="#checkmark" />
           </svg>
           <span class="text-sm font-medium text-slate-300">99.8% Uptime</span>
-        </div>
-      </div>
+        </li>
+      </ul>
 
       <!-- Certification Badge -->
-      <div class="inline-flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+      <div class="inline-flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm shadow-lg">
         <img
           src="./images/BD_Certified_Admin_Main_Badge.webp"
-          alt="HighLevel Certified Admin"
-          class="h-16 w-auto"
+          srcset="./images/BD_Certified_Admin_Main_Badge.webp 1x,
+                  ./images/BD_Certified_Admin_Main_Badge@2x.webp 2x"
+          alt="HighLevel Certified Admin Badge"
+          class="h-16 w-16 object-contain"
           width="64"
           height="64"
+          loading="eager"
+          decoding="async"
         />
         <div class="text-sm leading-tight">
           <div class="font-bold text-white">HighLevel Certified Admin</div>
-          <div class="text-xs text-slate-400">Official Platform Certification</div>
+          <div class="text-xs text-slate-300">Official Platform Certification</div>
         </div>
       </div>
 
@@ -333,85 +379,150 @@
 
     <!-- RIGHT COLUMN - System Flow Diagram -->
     <div class="relative">
-      <div class="rounded-3xl border border-white/10 bg-slate-900/80 backdrop-blur-xl p-6 shadow-2xl">
+      <div class="rounded-3xl border border-white/10 bg-slate-900/90 backdrop-blur-xl p-6 shadow-2xl">
         
         <!-- Header -->
-        <div class="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+        <header class="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
           <div class="flex items-center gap-2">
-            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20" aria-hidden="true">
               <svg class="h-5 w-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
-            <span class="text-sm font-bold text-white">Revenue Automation System</span>
+            <h2 class="text-sm font-bold text-white">Revenue Automation System</h2>
           </div>
-          <span class="text-xs font-medium text-slate-400">Lead → Revenue</span>
-        </div>
+          <span class="text-xs font-medium text-slate-400" aria-label="Process flow from lead to revenue">Lead → Revenue</span>
+        </header>
 
         <!-- Flow Steps -->
-        <div class="space-y-4 text-sm">
+        <ol class="space-y-4 text-sm" role="list">
 
           <!-- Step 1 -->
-          <div class="rounded-xl border border-white/10 bg-slate-800/50 p-4">
+          <li class="rounded-xl border border-white/10 bg-slate-800/50 p-4 transition-colors duration-300 hover:border-cyan-500/30 hover:bg-slate-800/70">
             <div class="mb-2 flex items-center gap-2">
-              <span class="flex h-6 w-6 items-center justify-center rounded-md bg-cyan-500/20 text-xs font-bold text-cyan-400">1</span>
-              <span class="font-semibold text-white">Inbound Lead Sources</span>
+              <span class="flex h-6 w-6 items-center justify-center rounded-md bg-cyan-500/20 text-xs font-bold text-cyan-400" aria-label="Step 1">1</span>
+              <h3 class="font-semibold text-white">Inbound Lead Sources</h3>
             </div>
-            <div class="text-xs text-slate-300">
+            <p class="text-xs text-slate-300">
               Website • Ads • Airbnb • OwnerRez • Referrals
-            </div>
-          </div>
+            </p>
+          </li>
 
-          <!-- Arrow -->
-          <div class="flex justify-center">
-            <svg class="h-6 w-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-          </div>
-
+         <!-- Arrow with Forced Container (NUCLEAR FIX) -->
+<li class="flex justify-center py-2" role="presentation" aria-hidden="true">
+  <div class="h-6 w-6 flex items-center justify-center">
+    <svg 
+      width="24" 
+      height="24" 
+      class="text-cyan-400 animate-bounce" 
+      style="animation-duration: 2s; max-width: 24px; max-height: 24px;"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2.5" 
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+      />
+    </svg>
+  </div>
+</li>
           <!-- Steps 2 & 3 -->
-          <div class="grid gap-4 md:grid-cols-2">
-            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-4">
+          <li class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-4 transition-colors duration-300 hover:border-blue-500/30 hover:bg-slate-800/70">
               <div class="mb-2 flex items-center gap-2">
-                <span class="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/20 text-xs font-bold text-blue-400">2</span>
-                <span class="font-semibold text-white">CRM Logic</span>
+                <span class="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/20 text-xs font-bold text-blue-400" aria-label="Step 2">2</span>
+                <h3 class="font-semibold text-white">CRM Logic</h3>
               </div>
-              <div class="text-xs text-slate-300">Pipelines • Tags • Fields</div>
+              <p class="text-xs text-slate-300">Pipelines • Tags • Fields</p>
             </div>
 
-            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-4 transition-colors duration-300 hover:border-purple-500/30 hover:bg-slate-800/70">
               <div class="mb-2 flex items-center gap-2">
-                <span class="flex h-6 w-6 items-center justify-center rounded-md bg-purple-500/20 text-xs font-bold text-purple-400">3</span>
-                <span class="font-semibold text-white">Automation</span>
+                <span class="flex h-6 w-6 items-center justify-center rounded-md bg-purple-500/20 text-xs font-bold text-purple-400" aria-label="Step 3">3</span>
+                <h3 class="font-semibold text-white">Automation</h3>
               </div>
-              <div class="text-xs text-slate-300">Triggers • SMS • Email</div>
+              <p class="text-xs text-slate-300">Triggers • SMS • Email</p>
             </div>
-          </div>
+          </li>
 
-          <!-- Arrow -->
-          <div class="flex justify-center">
-            <svg class="h-6 w-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-          </div>
+          <!-- Arrow with Forced Container (NUCLEAR FIX) -->
+<li class="flex justify-center py-2" role="presentation" aria-hidden="true">
+  <div class="h-6 w-6 flex items-center justify-center">
+    <svg 
+      width="24" 
+      height="24" 
+      class="text-cyan-400 animate-bounce" 
+      style="animation-duration: 2s; max-width: 24px; max-height: 24px;"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2.5" 
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+      />
+    </svg>
+  </div>
+</li>
 
           <!-- Step 4 -->
-          <div class="rounded-xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 to-green-600/10 p-4">
+          <li class="rounded-xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 to-green-600/10 p-4 transition-all duration-300 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/10">
             <div class="mb-2 flex items-center gap-2">
-              <span class="flex h-6 w-6 items-center justify-center rounded-md bg-emerald-500/30 text-xs font-bold text-emerald-400">4</span>
-              <span class="font-semibold text-white">Revenue Outcomes</span>
+              <span class="flex h-6 w-6 items-center justify-center rounded-md bg-emerald-500/30 text-xs font-bold text-emerald-400" aria-label="Step 4">4</span>
+              <h3 class="font-semibold text-white">Revenue Outcomes</h3>
             </div>
-            <div class="text-xs text-slate-300">
+            <p class="text-xs text-slate-300">
               Bookings • Rebookings • Reviews • Retention
-            </div>
-          </div>
+            </p>
+          </li>
 
-        </div>
+        </ol>
       </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  /* SVG Gradient Colors */
+  .gradient-start {
+    stop-color: #06b6d4;
+    stop-opacity: 1;
+  }
+  
+  .gradient-end {
+    stop-color: #2563eb;
+    stop-opacity: 1;
+  }
+  
+  /* Optimized bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-15%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-bounce,
+    .animate-ping {
+      animation: none;
+    }
+  }
+</style>
+
 
           <!-- Quick proof points -->
           <div class="mt-8 grid gap-3 sm:grid-cols-3">
