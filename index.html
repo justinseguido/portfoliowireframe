@@ -100,30 +100,135 @@
 
 <body  class="bg-slate-950 text-slate-200 antialiased leading-relaxed selection:bg-white/20 selection:text-white">
   <!-- Top Bar / Nav -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-      <a href="#top" class="flex items-center gap-2">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 font-semibold">JS</span>
-        <div class="leading-tight">
-          <div class="text-sm font-semibold">Justine Seguido</div>
-          <div class="text-xs text-slate-400">GHL • Automation Systems</div>
-        </div>
+ <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl shadow-lg shadow-black/5">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+    
+    <!-- Logo -->
+    <a href="#top" class="group flex items-center gap-3 transition-opacity hover:opacity-90">
+      <div class="relative">
+        <!-- Glow effect on hover -->
+        <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-50"></div>
+        <!-- Logo box -->
+        <span class="relative inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 font-bold text-sm text-white shadow-lg shadow-cyan-500/20 transition-transform duration-300 group-hover:scale-105">
+          JS
+        </span>
+      </div>
+      <div class="leading-tight">
+        <div class="text-sm font-bold text-white transition-colors">Justine Seguido</div>
+        <div class="text-xs font-medium text-cyan-400">GHL Automation Specialist</div>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+      <a class="relative text-slate-300 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-blue-600 after:transition-all after:duration-300 hover:after:w-full" href="#services">
+        Services
+      </a>
+      <a class="relative text-slate-300 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-blue-600 after:transition-all after:duration-300 hover:after:w-full" href="#case-studies">
+        Work
+      </a>
+      <a class="relative text-slate-300 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-blue-600 after:transition-all after:duration-300 hover:after:w-full" href="#process">
+        Process
+      </a>
+      <a class="relative text-slate-300 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-blue-600 after:transition-all after:duration-300 hover:after:w-full" href="#about">
+        About
+      </a>
+      <a class="relative text-slate-300 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-blue-600 after:transition-all after:duration-300 hover:after:w-full" href="#testimonials">
+        Reviews
+      </a>
+    </nav>
+
+    <!-- CTA Button -->
+    <div class="flex items-center gap-4">
+      <a href="#contact" class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 active:scale-100">
+        <span class="relative z-10 flex items-center gap-2">
+          Book Strategy Call
+          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </span>
+        <!-- Shine effect on hover -->
+        <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"></div>
       </a>
 
-      <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-        <a class="hover:text-white" href="#services">Services</a>
-        <a class="hover:text-white" href="#case-studies">Case Studies</a>
-        <a class="hover:text-white" href="#process">Process</a>
-        <a class="hover:text-white" href="#about">About</a>
-        <a class="hover:text-white" href="#testimonials">Testimonials</a>
-        <a class="hover:text-white" href="#contact">Contact</a>
-      </nav>
-
-      <a href="#contact" class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200">
-        Book a Free Strategy Call
-      </a>
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden rounded-lg p-2 text-slate-300 hover:bg-white/5 hover:text-white transition-colors" aria-label="Toggle menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl md:hidden">
+    <nav class="mx-auto max-w-6xl px-4 py-6 space-y-1">
+      <a class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" href="#services">Services</a>
+      <a class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" href="#case-studies">Work</a>
+      <a class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" href="#process">Process</a>
+      <a class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" href="#about">About</a>
+      <a class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" href="#testimonials">Reviews</a>
+      <a class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        
+        // Toggle icon
+        const icon = this.querySelector('svg path');
+        if (mobileMenu.classList.contains('hidden')) {
+          icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        } else {
+          icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        }
+      });
+
+      // Close menu when clicking links
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+          const icon = mobileMenuBtn.querySelector('svg path');
+          icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!mobileMenuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+          const icon = mobileMenuBtn.querySelector('svg path');
+          icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Smooth scroll for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Add active state for current section */
+  nav a.active {
+    color: #06b6d4;
+  }
+
+  nav a.active::after {
+    width: 100%;
+  }
+</style>
 
   <main id="top">
     <!-- HERO -->
@@ -1661,6 +1766,30 @@ document.addEventListener("DOMContentLoaded", () => {
   data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
  data-widget-id="6948eacdf258cf7574b544a5"   > 
  </script>
+
+ <script>
+  // Highlight active section in nav
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active', 'text-cyan-400');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active', 'text-cyan-400');
+      }
+    });
+  });
+</script>
 
 
 </body>
