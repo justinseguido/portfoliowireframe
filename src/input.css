@@ -34,7 +34,7 @@
     --radius:18px;
     --radius-lg:26px;
     color:var(--text);
-    font-family:ui-san
+    font-family:ui-sans-serif;
   }
 }
 
@@ -218,3 +218,8 @@
     .a2p-wrap{padding:70px 16px}
   }
 
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 180px; /* more space on mobile */
+  }
+}
