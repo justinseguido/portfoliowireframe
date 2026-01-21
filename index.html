@@ -93,11 +93,25 @@
   gtag('config', 'G-XJWZB7LTX5', {anonymize_ip: true});
 </script>
 
+<style>
+  html, body {
+    background: linear-gradient(135deg, #020617 0%, #1e1b4b 25%, #020617 50%, #1e293b 75%, #020617 100%) fixed;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  body {
+    background-color: #020617;
+    position: relative;
+  }
+</style>
+
 </head>
 
-<body  class="bg-slate-950 text-slate-200 antialiased leading-relaxed selection:bg-white/20 selection:text-white">
+<body class="text-slate-200 antialiased leading-relaxed selection:bg-white/20 selection:text-white">
   <!-- Top Bar / Nav -->
- <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl shadow-lg shadow-black/5">
+ <header class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl shadow-lg shadow-black/5">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
     
     <!-- Logo -->
@@ -229,12 +243,16 @@
 
   <main id="top">
  <!-- HERO SECTION - Senior Optimized -->
-<section class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 lg:py-32" aria-labelledby="hero-heading">
+<section class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 lg:py-32 overflow-hidden" aria-labelledby="hero-heading">
   
-  <!-- Background Effects (Optimized) -->
+  <!-- Background Effects (Vibrant) -->
   <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-    <div class="absolute -top-32 left-1/4 h-[400px] w-[400px] rounded-full bg-cyan-500/5 blur-3xl"></div>
-    <div class="absolute -bottom-32 right-1/4 h-[400px] w-[400px] rounded-full bg-blue-600/5 blur-3xl"></div>
+    <!-- Top left gradient -->
+    <div class="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/15 to-transparent blur-3xl animate-pulse"></div>
+    <!-- Top right gradient -->
+    <div class="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-gradient-to-l from-pink-500/20 via-purple-500/15 to-transparent blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    <!-- Bottom left gradient -->
+    <div class="absolute -bottom-40 left-1/4 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-600/10 blur-3xl"></div>
   </div>
 
   <!-- SVG Definitions (Define once, use everywhere) -->
@@ -267,10 +285,10 @@
     </defs>
   </svg>
 
-  <div class="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 xl:gap-20">
+  <div class="relative z-10 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16 xl:gap-20 items-center">
     
     <!-- LEFT COLUMN -->
-    <div class="space-y-6 md:space-y-8">
+    <div class="space-y-6 md:space-y-8 order-2 lg:order-1">
       
       <!-- Status Badge -->
       <div class="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 px-4 py-2 shadow-lg shadow-cyan-500/10">
@@ -353,29 +371,10 @@
         </li>
       </ul>
 
-      <!-- Certification Badge -->
-      <div class="inline-flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm shadow-lg">
-        <img
-          src="./images/BD_Certified_Admin_Main_Badge.webp"
-          srcset="./images/BD_Certified_Admin_Main_Badge.webp 1x,
-                  ./images/BD_Certified_Admin_Main_Badge@2x.webp 2x"
-          alt="HighLevel Certified Admin Badge"
-          class="h-16 w-16 object-contain"
-          width="64"
-          height="64"
-          loading="eager"
-          decoding="async"
-        />
-        <div class="text-sm leading-tight">
-          <div class="font-bold text-white">HighLevel Certified Admin</div>
-          <div class="text-xs text-slate-300">Official Platform Certification</div>
-        </div>
-      </div>
-
     </div>
 
     <!-- RIGHT COLUMN - System Flow Diagram -->
-    <div class="relative">
+    <div class="relative order-1 lg:order-2">
       <div class="rounded-3xl border border-white/10 bg-slate-900/90 backdrop-blur-xl p-6 shadow-2xl">
         
         <!-- Header -->
@@ -883,7 +882,8 @@
   <div class="mt-8 grid gap-5 md:grid-cols-2">
     
     <!-- Card 1 -->
-    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
+    <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
+      <h3 class="text-lg font-semibold text-white">Lead Automation & Follow-Up</h3>
       <p class="mt-2 text-m text-slate-300">
         Convert 30-40% more leads by fixing the gap between inquiry and first response. Structured pipelines + automated sequences that follow up in minutes, not hours.
       </p>
@@ -896,8 +896,8 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
-      <h3 class="text-lg font-semibold">STR Automation (OwnerRez / MarketMySTR)</h3>
+    <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-purple-500/10 to-pink-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-2">
+      <h3 class="text-lg font-semibold text-white">STR Automation (OwnerRez / MarketMySTR)</h3>
       <p class="mt-2 text-m text-slate-300">
         Eliminate 8-12 hours/week of manual guest communication. Automate pre-arrival instructions, mid-stay check-ins, checkout reminders, and review requests—all triggered by booking data.
       </p>
@@ -910,8 +910,8 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
-      <h3 class="text-lg font-semibold">CRM & Pipeline Architecture</h3>
+    <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2">
+      <h3 class="text-lg font-semibold text-white">CRM & Pipeline Architecture</h3>
       <p class="mt-2 text-m text-slate-300">
         Stop losing leads in messy pipelines. Build clean stages, lead scoring, and reporting so you actually know which campaigns work and where deals get stuck.
       </p>
@@ -924,8 +924,8 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
-      <h3 class="text-lg font-semibold">Integrations (Webhooks & APIs)</h3>
+    <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-emerald-500/10 to-green-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-2">
+      <h3 class="text-lg font-semibold text-white">Integrations (Webhooks & APIs)</h3>
       <p class="mt-2 text-m text-slate-300">
         Connect your tools so data flows automatically. No more copy-pasting between systems, no more "it worked yesterday but broke today" emergencies.
       </p>
@@ -1280,9 +1280,9 @@
   <div class="mt-8 grid gap-5 lg:grid-cols-3">
     
     <!-- Case 1 -->
-    <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+    <article class="rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
       <div class="text-s text-slate-400">STR • Integration</div>
-      <h3 class="mt-2 text-lg font-semibold">OwnerRez → GoHighLevel Sync</h3>
+      <h3 class="mt-2 text-lg font-semibold text-white">OwnerRez → GoHighLevel Sync</h3>
       <p class="mt-3 text-m text-slate-300">
         Built webhook integration to sync booking data automatically. Eliminated 8 hours/week of manual data entry and reduced booking confirmation errors by 90%.
       </p>
@@ -1299,9 +1299,9 @@
     </article>
 
     <!-- Case 2 -->
-    <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+    <article class="rounded-3xl border border-white/10 bg-gradient-to-br from-purple-500/10 to-pink-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-2">
       <div class="text-s text-slate-400">Migration • Automations</div>
-      <h3 class="mt-2 text-lg font-semibold">MarketMySTR → GHL Migration</h3>
+      <h3 class="mt-2 text-lg font-semibold text-white">MarketMySTR → GHL Migration</h3>
       <p class="mt-3 text-m text-slate-300">
         Migrated 15+ workflows, rebuilt trigger logic, and standardized tagging structure. Result: 99.8% automation reliability (vs. 60% before migration).
       </p>
@@ -1317,9 +1317,9 @@
     </article>
 
     <!-- Case 3 -->
-    <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+    <article class="rounded-3xl border border-white/10 bg-gradient-to-br from-emerald-500/10 to-green-500/5 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-2">
       <div class="text-s text-slate-400">Remarketing • Revenue</div>
-      <h3 class="mt-2 text-lg font-semibold">Rebook & Review System</h3>
+      <h3 class="mt-2 text-lg font-semibold text-white">Rebook & Review System</h3>
       <p class="mt-3 text-m text-slate-300">
         Built segmented post-checkout campaigns that increased repeat bookings by 28% and generated 40+ 5-star reviews in 90 days through automated follow-up.
       </p>
